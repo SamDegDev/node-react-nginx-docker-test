@@ -25,7 +25,9 @@
     "codecov": "cat coverage/*/lcov.info | codecov",
     "build:prod": "docker build -t samdegdev/node-react-nginx-prod .",
     "start:prod": "docker run --rm -d -p 80:80 --name running-node-react-nginx-prod samdegdev/node-react-nginx-prod",
-    "stop:prod": "docker stop running-node-react-nginx-prod"
+    "stop:prod": "docker stop running-node-react-nginx-prod",
+    "create:aws": "chmod +x ./bin/deploy.sh; ./bin/deploy.sh create",
+    "deploy:aws": "chmod +x ./bin/deploy.sh; ./bin/deploy.sh deploy"
   },
   "betterScripts": {
     "compile": {
